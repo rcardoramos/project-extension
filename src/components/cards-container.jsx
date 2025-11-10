@@ -3,7 +3,7 @@ import data from "../data.json";
 
 export const CardsContainer = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="grid md:grid-cols-2 gap-3 xl:grid-cols-3">
       {data.map((extension) => (
         <Card key={extension.name} {...extension} />
       ))}

@@ -10,6 +10,7 @@ export const Header = () => {
   const handleClick = () => {
     const isDarkChanged = document.documentElement.classList.toggle("dark");
     setIsDark(isDarkChanged);
+    localStorage.setItem("dark", isDarkChanged);
   };
 
   return (
