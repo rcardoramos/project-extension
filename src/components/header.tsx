@@ -13,13 +13,13 @@ export const Header = () => {
   };
 
   return (
-    <div className="bg-Neutral-0 dark:bg-Neutral-800 flex justify-between h-[66px] px-3 py-2 rounded-[10px] items-center">
+    <div className="bg-Neutral-0 dark:bg-Neutral-800 flex justify-between h-[66px] px-3 py-2 rounded-[10px] items-center mb-6">
       <img src={isDark ? LogoDark : Logo} alt="Logo" />
       <button
         onClick={handleClick}
-        className=" bg-Neutral-100 dark:bg-Neutral-700 size-[50px] grid place-content-center rounded-lg cursor-pointer hover:bg-Neutral-200"
+        className=" bg-Neutral-100 dark:bg-Neutral-700 size-[50px] grid place-content-center rounded-lg cursor-pointer hover:bg-Neutral-200 dark:hover:bg-Neutral-800"
       >
-        <img src={IconMoon} alt="Dark Mode" />
+        <img src={isDark ? IconSon : IconMoon} alt="Dark Mode" />
       </button>
     </div>
   );
