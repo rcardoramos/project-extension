@@ -5,7 +5,12 @@ import IconSon from "../assets/images/icon-sun.svg";
 import IconMoon from "../assets/images/icon-moon.svg";
 
 export const Header = () => {
-  const [isDark, setIsDark] = useState(false);
+  const savedTheme = localStorage.getItem("dark");
+  if (JSON.parse(savedTheme)) {
+    document.documentElement.classList.add("dark");
+  }
+
+  const [isDark, setIsDark] = useState(JSON.parse(savedTheme));
 
   const handleClick = () => {
     const isDarkChanged = document.documentElement.classList.toggle("dark");
