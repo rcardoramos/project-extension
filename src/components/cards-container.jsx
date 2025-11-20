@@ -18,7 +18,12 @@ export const CardsContainer = ({ filter }) => {
   return (
     <div className="grid md:grid-cols-2 gap-3 xl:grid-cols-3">
       {filteredExtensions.map((extension) => (
-        <Card key={extension.name} {...extension} />
+        <Card
+          key={extension.name}
+          {...extension}
+          extensions={extensions}
+          setExtensions={setExtensions}
+        />
       ))}
     </div>
   );
